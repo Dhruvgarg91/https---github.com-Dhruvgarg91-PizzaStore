@@ -62,7 +62,6 @@ function addToBasket(product) {
 
   basketItem.appendChild(removeButton);
   basketCardsContainer.appendChild(basketItem);
-  9;
   totalPrice += parseInt(product.price);
   const totalPriceElement = document.getElementById("total-price");
   totalPriceElement.textContent = totalPrice;
