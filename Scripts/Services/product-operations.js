@@ -10,7 +10,6 @@ export default async function readAllProducts() {
       const pizzaObject = new Product(
         pizza.id,
         pizza.name,
-        pizza.menu_description,
         pizza.price,
         pizza.url
       );
