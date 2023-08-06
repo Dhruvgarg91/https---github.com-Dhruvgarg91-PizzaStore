@@ -1,6 +1,6 @@
 // Products CRUD Operation
 // C - Create  , R  - Read, U - Update , D - Delete
-import Product from "../models/product.js";
+import Product from "../Models/product.js";
 import doNetworkCall from "./api-client.js";
 export default async function readAllProducts() {
   try {
