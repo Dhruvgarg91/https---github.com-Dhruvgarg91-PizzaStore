@@ -98,27 +98,28 @@ function updatePayNowButtonState() {
 const searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", searchProducts);
 
-
 function searchProducts() {
-  const searchInput = document.getElementById("searchInput").value.toLowerCase();
+  const searchInput = document
+    .getElementById("searchInput")
+    .value.toLowerCase();
   const cardContainerElement = document.getElementById("card-container");
   cardContainerElement.innerHTML = "";
 
-  readAllProducts().then(products => {
-    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchInput));
-    
+  readAllProducts().then((products) => {
+    const filteredProducts = products.filter((product) =>
+      product.name.toLowerCase().includes(searchInput)
+    );
+
     if (filteredProducts.length === 0) {
       cardContainerElement.innerHTML = `
         <div class="text-center">
           <img src="https://orig00.deviantart.net/b914/f/2016/016/1/1/goku_eating_by_alexiscabo1-d9o7wms.png" alt="No Results" height="50%">
-          <p>None found</p>
+          <h2>None found</h2>
         </div>`;
     } else {
-      filteredProducts.forEach(product => createCard(product));
+      filteredProducts.forEach((product) => createCard(product));
     }
   });
 }
-
-
 
 showProducts();
