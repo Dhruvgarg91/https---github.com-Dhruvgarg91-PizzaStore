@@ -27,17 +27,12 @@ function createCard(product) {
   cardTitle.className = "card-title";
   cardTitle.textContent = product.name;
 
-  const cardText = document.createElement("p");
-  cardText.className = "card-text";
-  cardText.textContent = product.desc;
-
   const link = document.createElement("a");
   link.className = "btn btn-primary";
   link.textContent = `Add ₹${product.price}`;
   link.addEventListener("click", () => addToBasket(product));
 
   cardBody.appendChild(cardTitle);
-  cardBody.appendChild(cardText);
 
   cardBody.appendChild(link);
 
