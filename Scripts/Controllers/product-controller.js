@@ -59,9 +59,15 @@ function addToBasket(product) {
   basketCardsContainer.appendChild(basketItem);
   totalPrice += parseInt(product.price);
   const totalPriceElement = document.getElementById("total-price");
+  const gstPriceElement = document.getElementById("gst");
+  const netPriceElement = document.getElementById("net-price");
   totalPriceElement.textContent = totalPrice;
+  let gst =0.18*parseInt(totalPrice);
+  gstPriceElement.textContent = gst;
+  netPriceElement.textContent = totalPrice+gst;
   updatePayNowButtonState();
 }
+
 
 function removeCardFromBasket(product) {
   const basketCardsContainer = document.getElementById("basket-cards");
@@ -73,7 +79,12 @@ function removeCardFromBasket(product) {
 
       totalPrice -= parseInt(product.price);
       const totalPriceElement = document.getElementById("total-price");
+      const gstPriceElement = document.getElementById("gst");
+      const netPriceElement = document.getElementById("net-price");
       totalPriceElement.textContent = totalPrice;
+      let gst =0.18*parseInt(totalPrice);
+      gstPriceElement.textContent = gst;
+      netPriceElement.textContent = totalPrice+gst;
       updatePayNowButtonState();
       break;
     }
