@@ -1,7 +1,7 @@
 // Network Call Code
 export default async function doNetworkCall() {
   const URL =
-    "https://gist.githubusercontent.com/Dhruvgarg91/ff8347e5fded74a0d4578eeabf1a2f2b/raw/adda0168d688a753943a015f85022a4a3df1920d/Pizza.json";
+    "https://gist.githubusercontent.com/therealdhruvgarg/ff8347e5fded74a0d4578eeabf1a2f2b/raw/05694902f615a8d63a4506e968e992c6acd55bba/Pizza.json";
   try {
     const response = await fetch(URL);
     const object = await response.json();
